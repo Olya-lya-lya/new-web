@@ -70,6 +70,11 @@
     gap: 40.24px;
 }
 
+.card {
+    position: relative;
+    z-index: 1;
+}
+
 .card img {
     cursor: pointer;
     border-radius: 12px;
@@ -327,4 +332,80 @@ input {
 
 .logo-footer img {
     height: 85px;
+}
+
+.card-out {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 50px 22px 30px 22px;
+    width: 580px;
+    height: 580px;
+    border-radius: 12px;
+    background: rgba(0,0,0,.5);
+    z-index: 2;
+}
+
+.card-out-header {
+    color: #FFF;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.card-out-name {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-out-about {
+    margin-top: 7px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.card-out-about span {
+    font-weight: 700;
+}
+
+.card-out-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    width: 537px;
+    height: 57px;
+    border-radius: 12px;
+    background: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.card-out-button:nth-child(1) {
+    margin-top: 40px;
+}
+
+.card-out-button:hover {
+    background: radial-gradient(343.88% 97.53% at 50% 50%, #BF8836 0%, #F2DE8A 100%);
+    border: none;
+    color: black;
+}
+
+.card-out-button img {
+    margin-left: 7px;
+    border: none;
+}
+
+.card-out-button.button {
+    margin-top: 40px;
 }
