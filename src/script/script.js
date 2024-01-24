@@ -1,17 +1,20 @@
-const cardOut = document.querySelectorAll('.card-out');
+// Получаем все карточки товара
 const cardIn = document.querySelectorAll('.card');
 
+// Для каждой карточки товара привязываем обработчики событий
+cardIn.forEach(card => {
+  // Получаем скрытый блок внутри карточки
+  const cardOut = card.querySelector('.card-out');
 
-for (let i = 0; i < cardIn.length; i++) {
-    cardIn[i].addEventListener('mouseenter', () => {
-        for (let j = 0; j < cardOut.length; j++) {
-            cardOut[j].addEventListener('mouseleave', () => {
+  // Обработчик события наведения мыши
+  card.addEventListener('mouseenter', () => {
+    // Показываем скрытый блок
+    cardOut.style.display = 'block';
+  });
 
-            });
-        }
-        if (cardOut[0].style.display == 'none') {
-            cardOut[0].style.display = 'block';
-        }
-    });
-}
-
+  // Обработчик события отведения мыши
+  card.addEventListener('mouseleave', () => {
+    // Скрываем скрытый блок
+    cardOut.style.display = 'none';
+  });
+});
