@@ -4,8 +4,14 @@ const cardIn = document.querySelectorAll('.card');
 
 for (let i = 0; i < cardIn.length; i++) {
     cardIn[i].addEventListener('mouseenter', () => {
-       if(cardOut[i].style.display == 'none') {
-        cardOut[i].style.display == 'block';
-       }
+        for (let j = 0; j < cardOut.length; j++) {
+            cardOut[j].addEventListener('mouseleave', () => {
+
+            });
+        }
+        if (cardOut[0].style.display == 'none') {
+            cardOut[0].style.display = 'block';
+        }
     });
 }
+
